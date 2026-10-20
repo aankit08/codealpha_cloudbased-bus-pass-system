@@ -1,0 +1,13 @@
+services:
+  cloudbus:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      SECRET_KEY: "replace-this-with-a-long-random-secret"
+      DATABASE_PATH: "/data/buspass.db"
+    volumes:
+      - busdata:/data
+    restart: unless-stopped
+volumes:
+  busdata:

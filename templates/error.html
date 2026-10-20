@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block title %}Error {{ code }} · CloudBus Pass{% endblock %}{% block content %}<section class="empty"><p class="eyebrow">ERROR {{ code }}</p><h1>Oops, something went wrong.</h1><p>{{ message }}</p><a class="primary" href="{{ url_for('index') }}">Back to home</a></section>{% endblock %}
